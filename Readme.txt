@@ -4,4 +4,6 @@ I am not responsible for your actions.
 
 Thank you for choosing XWorm (:
 
+to run, just launch setup.bat
+
 @XCoderTools
